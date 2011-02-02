@@ -9,10 +9,10 @@ exec >> /var/log/user.log 2>&1
 case "$1" in
 	start)
 		echo "Starting $0"
-                /mnt/md0/root/Development/github/sfloess/alt-f/bash/bootup.sh /root/Development/github/sfloess/alt-f/bash/startup.sh	
+                /mnt/md0/opt/Development/github/sfloess/alt-f/bash/bootup.sh /opt/Development/github/sfloess/alt-f/bash/startup.sh	
 		;;
 	stop)
 	      	echo "Stopping $0"
-                debian -chroot /root/Development/github/sfloess/alt-f/bash/shutdown.sh
+                debian -chroot /opt/Development/github/sfloess/alt-f/bash/shutdown.sh
 		;;
 esac
