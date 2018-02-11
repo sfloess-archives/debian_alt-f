@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install -y make git apache2 python-yaml python-cheetah python-netaddr python-simplejson python-urlgrabber libapache2-mod-wsgi python-django yum-utils lsb tftpd-hpa syslinux-common pxelinux
+apt-get install -y make git apache2 python-yaml python-cheetah python-netaddr python-simplejson python-urlgrabber libapache2-mod-wsgi python-django yum-utils lsb tftpd-hpa syslinux-common pxelinux isolinux
 
 mkdir -p ${HOME}/Development/github/cobbler
 cd ${HOME}/Development/github/cobbler
@@ -15,6 +15,8 @@ a2enmod proxy
 a2enmod proxy_http
 a2enmod rewrite
 
+mkdir -p /usr/share/syslinux/
+
 ln -s /etc/apache2/conf-available/cobbler.conf       /etc/apache2/conf-enabled/
 ln -s /etc/apache2/conf-available/cobbler_web.conf   /etc/apache2/conf-enabled/
 
@@ -26,6 +28,12 @@ ln -s /usr/local/share/cobbler                       /usr/share
 ln -s /usr/lib/PXELINUX/pxlinux.0                    /usr/lib/syslinux/
 ln -s /usr/lib/syslinux/modules/bios/menu.c32        /usr/lib/syslinux/
 ln -s /usr/lib/syslinux/modules/bios/ldlinux.c32     /usr/lib/syslinux/
+ln -s /usr/lib/ISOLINUX/isolinux.bin                 /usr/lib/syslinux/
+ln -s /usr/lib/syslinux/modules/bios/menu.c32        /var/lib/cobbler/loaders/
+ln -s /usr/lib/syslinux/modules/bios/chain.c32       /usr/lib/syslinux/
+ln -s /usr/lib/syslinux/modules/bios/libutil.c32     /usr/lib/syslinux/
+ln -s /usr/lib/syslinux/modules/bios/libcom32.c32    /usr/share/syslinux/
+ln -s /usr/lib/syslinux/modules/bios/libutil.c32     /usr/share/syslinux/
 
 chown www-data /var/lib/cobbler/webui_sessions
 
