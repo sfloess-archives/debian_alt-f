@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install -y make git apache2 python-yaml python-cheetah python-netaddr python-simplejson python-urlgrabber libapache2-mod-wsgi python-django atftpd yum-utils lsb
+apt-get install -y make git apache2 python-yaml python-cheetah python-netaddr python-simplejson python-urlgrabber libapache2-mod-wsgi python-django atftpd yum-utils lsb tftpd-hpa
 
 mkdir -p ${HOME}/Development/github/cobbler
 cd ${HOME}/Development/github/cobbler
@@ -28,11 +28,15 @@ sed -i "s/^SECRET_KEY = .*/SECRET_KEY = '${SECRET_KEY}'/" /usr/local/share/cobbl
 
 sed -i "s/^server: 127.0.0.1/server: 192.168.168.31/" /etc/cobbler/settings
 
+sed -i 's/--secure/--secure --ipv4/' /etc/defaults/tftpd-hpa
+
 echo "Enter password for cobbler..."
 
 htdigest /etc/cobbler/users.digest "Cobbler" cobbler
 
-service apache2 restart
-service cobblerd restart
+service apache2   restart
+service cobblerd  restart
+service tftpd-hpa restart
 
 cd -
+
