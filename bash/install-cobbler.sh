@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install -y make git apache2 python-yaml python-cheetah python-netaddr python-simplejson python-urlgrabber libapache2-mod-wsgi python-django yum-utils lsb tftpd-hpa syslinux-common pxelinux isolinux
+apt-get install -y make git apache2 python-yaml python-cheetah python-netaddr python-simplejson python-urlgrabber libapache2-mod-wsgi python-django yum-utils lsb tftpd-hpa syslinux-common pxelinux isolinux genisoimage
 
 mkdir -p ${HOME}/Development/github/cobbler
 cd ${HOME}/Development/github/cobbler
@@ -34,6 +34,9 @@ ln -s /usr/lib/syslinux/modules/bios/chain.c32       /usr/lib/syslinux/
 ln -s /usr/lib/syslinux/modules/bios/libutil.c32     /usr/lib/syslinux/
 ln -s /usr/lib/syslinux/modules/bios/libcom32.c32    /usr/share/syslinux/
 ln -s /usr/lib/syslinux/modules/bios/libutil.c32     /usr/share/syslinux/
+
+ln -s /usr/bin/genisoimage                           /usr/bin/mkisofs
+
 
 chown www-data /var/lib/cobbler/webui_sessions
 
