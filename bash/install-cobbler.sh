@@ -21,6 +21,8 @@ ln -s /etc/apache2/conf-available/cobbler_web.conf   /etc/apache2/conf-enabled/
 ln -s /usr/local/lib/python2.6/dist-packages/cobbler /usr/lib/python2.6/dist-packages/
 ln -s /usr/local/lib/python2.7/dist-packages/cobbler /usr/lib/python2.7/dist-packages/ 
 
+ln -s /usr/local/share/cobbler                       /usr/share
+
 ln -s /usr/lib/PXELINUX/pxlinux.0                    /usr/lib/syslinux/
 ln -s /usr/lib/syslinux/modules/bios/menu.c32        /usr/lib/syslinux/
 ln -s /usr/lib/syslinux/modules/bios/ldlinux.c32     /usr/lib/syslinux/
@@ -44,5 +46,4 @@ htdigest /etc/cobbler/users.digest "Cobbler" cobbler
 service apache2   restart
 service cobblerd  restart
 service tftpd-hpa restart
-
 
