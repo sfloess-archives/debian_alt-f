@@ -2,6 +2,7 @@
 
 umount -a
 
+/etc/init.d/puppet-master   stop
 /etc/init.d/apache2         stop
 /etc/init.d/cobblerd        stop
 /etc/init.d/ssh             stop
