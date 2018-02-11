@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sed -i "s/^search\ .*/search flossware\.com/" /etc/resolv.conf
+
 /etc/init.d/rsyslog         start
 /etc/init.d/cron            start
 /etc/init.d/rpcbind         start
