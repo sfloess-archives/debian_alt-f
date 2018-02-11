@@ -12,5 +12,7 @@ sed -i "s/^search\ .*/search flossware\.com/" /etc/resolv.conf
 /etc/init.d/cobblerd        start
 /etc/init.d/apache2         start
 /etc/init.d/puppet-master   start
+/etc/init.d/tftpd-hpa       start
 
 mount -a
+
