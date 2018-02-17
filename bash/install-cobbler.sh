@@ -70,7 +70,6 @@ ln -s /usr/lib/syslinux/modules/bios/libcom32.c32    /usr/share/syslinux/
 ln -s /usr/lib/syslinux/modules/bios/libutil.c32     /usr/share/syslinux/
 
 ln -s /usr/bin/genisoimage                           /usr/bin/mkisofs
-ln -s /usr/bin/genisoimage                           /usr/bin/livecd-iso-to-pxeboot
 
 # ----------------------------------------------------------
 
