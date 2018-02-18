@@ -20,6 +20,8 @@ git clone https://github.com/cobbler/cobbler.git
 
 cd cobbler
 
+git checkout release28
+
 make install
 
 # ----------------------------------------------------------
