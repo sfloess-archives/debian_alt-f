@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 
 activate_chroot() {
 
@@ -33,5 +33,5 @@ debdir=/mnt/md0
 
 activate_chroot
 
-chroot $debdir "$*"
+chroot $debdir "$*" > /var/log/flossware-startup.log 2>&1
 exit $?
