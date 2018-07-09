@@ -1,2 +1,2 @@
-# alt-f
-My home alt-f work
+# debian_alt-f
+My home Alt-F setup using Debian
