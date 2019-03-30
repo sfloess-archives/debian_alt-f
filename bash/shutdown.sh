@@ -9,10 +9,12 @@
 /etc/init.d/nis             stop
 /etc/init.d/nfs-common      stop
 /etc/init.d/inetutils-inetd stop
+/etc/init.d/postfix         stop
 /etc/init.d/rpcbind         stop
 /etc/init.d/cron            stop
 /etc/init.d/rsyslog         stop
 
+umount /mnt/admin-ap/etc
 umount /mnt/admin-ap/home
 
 umount /mnt/admin-ap/backups

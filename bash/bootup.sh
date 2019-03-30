@@ -9,7 +9,9 @@ activate_chroot() {
 	grep -Ev ^rootfs\|^/dev/loop0\|/rootmnt\|aufs /proc/mounts > $debdir/etc/mtab
 
 	#mkdir -p $debdir/proc $debdir/sys $debdir/dev $debdir/dev/pts $debdir/tmp
+	mkdir -p $debdir/mnt/cloud-server
 
+	mount -o bind  /     $debdir/mnt/cloud-server
 	mount -o bind  /proc $debdir/proc
 	#mount -t usbfs usbfs $debdir/proc/bus/usb
 	mount -o bind  /sys  $debdir/sys
