@@ -29,7 +29,8 @@ activate_chroot() {
 
 board=$(cat /tmp/board)
 model=${board%-*}
-debdir=/mnt/md0
+#debdir=/mnt/md0
+debdir=/mnt/sda2
 
 activate_chroot
 
