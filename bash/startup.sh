@@ -8,7 +8,7 @@
 /etc/init.d/nfs-common      start
 #/etc/init.d/autofs          start
 /etc/init.d/ssh             start
-/etc/init.d/cobbler         start
+/etc/init.d/cobblerd        start
 /etc/init.d/apache2         start
 
 mkdir -p /mnt/admin-ap/backups
