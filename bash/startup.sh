@@ -23,4 +23,7 @@ mount admin-ap:/opt/nas     /mnt/admin-ap/nas
 mount admin-ap:/opt/shared  /mnt/admin-ap/shared
 mount admin-ap:/root        /mnt/admin-ap/root
 
+mkdir -p /mnt/cloud-ap/shared
+
+mount cloud-ap:/opt/shared  /mnt/cloud-ap/shared
 
