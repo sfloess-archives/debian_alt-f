@@ -12,7 +12,7 @@ apt-get install postfix alpine lsb-release locales genders sudo genisoimage
 
 # ------------------------
 
-apt-get install python-pip python-yaml python-simplejson python-cheetah pxelinux isolinux syslinux-common
+apt-get install python-pip python-yaml python-simplejson python-cheetah pxelinux isolinux syslinux-common libapache2-mod-wsg
 pip2 install netaddr yaml
 
 ln -s /usr/lib/PXELINUX/pxelinux.0 /usr/lib/syslinux/pxelinux.0
@@ -21,6 +21,11 @@ ln -s /usr/lib/ISOLINUX/isolinux.bin /usr/lib/syslinux/isolinux.bin
 ln -s /usr/lib/syslinux/menu.c32 /var/lib/cobbler/loaders/menu.c32
 ln -s /usr/lib/selinux/modules/bios/chain.c32 /usr/lib/syslinux/chain.c32
 ln -s /usr/bin/genisoimage /usr/bin/mkisofs
+
+a2enmod wsgi
+a2enmod proxy
+a2enmod proxy_http
+a2enmod rewrite
 
 # ------------------------
 
