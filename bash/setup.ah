@@ -6,7 +6,7 @@ apt-get install -y rsyslog rpcbind inetutils-inetd nfs-common apache2 htop vim g
 
 apt-get install -y createrepo apache2 genisoimage libapache2-mod-wsgi libapache2-mod-ssl python-cheetah python-netaddr python-simplejson python-urlgrabber python-yaml rsync
 
-apt-get install -y git make apache2-dev yum-utils tftpd-hpa postfix alpine lsb-release locales genders sudo genisoimage python-pip libapache2-mod-wsgi
+apt-get install -y git make apache2-dev yum-utils tftpd-hpa postfix alpine lsb-release locales genders sudo genisoimage python-pip libapache2-mod-wsgi tftp-hpa pxelinux isolinux
 
 # ------------------------
 
