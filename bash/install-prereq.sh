@@ -22,6 +22,8 @@ ln -s /usr/lib/syslinux/menu.c32 /var/lib/cobbler/loaders/menu.c32
 ln -s /usr/lib/selinux/modules/bios/chain.c32 /usr/lib/syslinux/chain.c32
 ln -s /usr/bin/genisoimage /usr/bin/mkisofs
 
+cp /usr/lib/syslinux/modules/bios/ldlinux.c32 /srv/tftpboot
+
 a2enmod wsgi
 a2enmod proxy
 a2enmod proxy_http

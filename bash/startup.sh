@@ -27,3 +27,9 @@ mkdir -p /mnt/cloud-ap/shared
 
 mount cloud-ap:/opt/shared  /mnt/cloud-ap/shared
 
+mkdir -p /mnt/redhat-laptop/root
+mkdir -p /mnt/redhat-laptop/home
+
+mount redhat-laptop:/root /mnt/redhat-laptop/root
+mount redhat-laptop:/home /mnt/redhat-laptop/home
+
