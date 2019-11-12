@@ -21,6 +21,10 @@ ln -s /usr/lib/syslinux/modules/bios/chain.c32 /usr/lib/syslinux/chain.c32
 ln -s /usr/lib/ISOLINUX/isolinux.bin /usr/lib/syslinux/isolinux.bin
 ln -s /usr/bin/genisoimage /usr/bin/mkisofs
 
+cp /usr/lib/syslinux/modules/bios/ldlinux.c32 /srv/tftp
+cp /usr/lib/syslinux/modules/bios/libutil.c32 /srv/tftp
+cp /usr/lib/syslinux/modules/bios/menu.c32    /srv/tftp
+
 # ------------------------
 
 cp /usr/lib/syslinux/modules/bios/ldlinux.c32 /srv/tftpboot
