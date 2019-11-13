@@ -24,6 +24,7 @@ ln -s /usr/bin/genisoimage /usr/bin/mkisofs
 cp /usr/lib/syslinux/modules/bios/ldlinux.c32 /srv/tftp
 cp /usr/lib/syslinux/modules/bios/libutil.c32 /srv/tftp
 cp /usr/lib/syslinux/modules/bios/menu.c32    /srv/tftp
+cp /usr/lib/syslinux/modules/bios/ldlinux.c32 /usr/lib/syslinux/ldlinux.c32
 
 # ------------------------
 
