@@ -8,6 +8,8 @@ apt-get install -y createrepo apache2 genisoimage libapache2-mod-wsgi libapache2
 
 apt-get install -y git make apache2-dev yum-utils tftpd-hpa postfix alpine lsb-release locales genders sudo genisoimage python-pip libapache2-mod-wsgi tftp-hpa pxelinux isolinux python-django rsync
 
+apt-get install -y cron ssh
+
 # ------------------------
 
 pip2 install netaddr pyyml simplejson cheetah mod-wsgi
