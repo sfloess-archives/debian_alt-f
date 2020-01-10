@@ -2,6 +2,7 @@
 
 /etc/init.d/rsyslog         start
 /etc/init.d/cron            start
+#/etc/init.d/tlp             start
 /etc/init.d/rpcbind         start
 #/etc/init.d/inetutils-inetd start
 /etc/init.d/tftpd-hpa start
@@ -26,14 +27,25 @@ mount admin-ap:/opt/shared  /mnt/admin-ap/shared
 mount admin-ap:/root        /mnt/admin-ap/root
 
 mkdir -p /mnt/cloud-ap/shared
+mkdir -p /mnt/cloud-ap/backups
 
-mount cloud-ap:/opt/shared  /mnt/cloud-ap/shared
+mount cloud-ap:/opt/shared   /mnt/cloud-ap/shared
+mount cloud-ap:/opt/backups  /mnt/cloud-ap/backups
 
-mkdir -p /mnt/redhat-laptop/etc
-mkdir -p /mnt/redhat-laptop/home
-mkdir -p /mnt/redhat-laptop/root
+#mkdir -p /mnt/redhat-laptop/etc
+#mkdir -p /mnt/redhat-laptop/home
+#mkdir -p /mnt/redhat-laptop/root
 
-mount redhat-laptop:/etc  /mnt/redhat-laptop/etc
-mount redhat-laptop:/home /mnt/redhat-laptop/home
-mount redhat-laptop:/root /mnt/redhat-laptop/root
+#mount redhat-laptop:/etc  /mnt/redhat-laptop/etc
+#mount redhat-laptop:/home /mnt/redhat-laptop/home
+#mount redhat-laptop:/root /mnt/redhat-laptop/root
+
+mkdir -p /mnt/redhat-workstation/etc
+mkdir -p /mnt/redhat-workstation/home
+mkdir -p /mnt/redhat-workstation/root
+
+mount redhat-workstation:/etc  /mnt/redhat-workstation/etc
+mount redhat-workstation:/home /mnt/redhat-workstation/home
+mount redhat-workstation:/root /mnt/redhat-workstation/root
+
 
